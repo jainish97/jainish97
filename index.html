@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Gaali Generator</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    function generateGaali() {
+      const gaali = ["Chutiyo", "Gandu", "Chutiyapa na karis", "Gandu", "Bhenchod", "Madarchod", "Bakchod","Chodu","Bhosdike","Harami","Lodu","Gand Marai"];
+
+      const random = Math.floor(Math.random() * gaali.length);
+      var x = gaali[random]
+      document.getElementById("myInput").value=x;
+      document.getElementById("info").innerText = "Copy kar ne";
+    }
+
+    function copyGaali() {
+      var copyText = document.getElementById("myInput");
+      copyText.select();
+      document.execCommand("copy");
+      document.getElementById("info").innerText = "Thai gayu Copy, Send kari de";
+    }
+  </script>
+</head>
+
+<body>
+  <main class="area">
+    <header class="mainHeader">
+      <h1>Gaali Generator</h1>
+      <span id="timerArea"></span>
+    </header>
+    <section id="questionsContainer" class="hide">
+      <div id="question"></div>
+      <div id="answers" class="buttonArea"></div>
+    </section>
+    <section class="scores">
+      <div id="scoreArea" class="hide"></div>
+    </section>
+    <section class="controls">
+
+      <button class="start" id="startButton" onclick="generateGaali()">Generate Gaali</button>
+      <input type="text" id="myInput" value="ruko jara sabar karo" style="  margin-left:5%;">
+      <button class="btn" id="showScoresButton" onclick="copyGaali()">Copy text</button>
+      <h3 id="info">Copy kar ne</h3>
+      <br />
+
+    </section>
+
+  </main>
+
+  <script src="./assets/logic/script.js"></script>
+</body>
+
+</html>

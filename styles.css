@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #4158D0;
+  overflow: -moz-scrollbars-vertical;
+  overflow-x: hidden;
+  overflow-y: auto;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+h3 {
+  margin: 10px 0px;
+}
+
+.mainHeader {
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid grey;
+}
+
+.area {
+  width: 90vw;
+  height: 50vh;
+  max-width: 90%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.buttonArea {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+
+}
+
+button {
+  --hue: var(--hue-neutral);
+  border: 1px solid grey;
+  background-color: #28282b;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  outline: none;
+
+}
+
+button:hover {
+  border-color: black;
+}
+
+.start {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 10px 0px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hide {
+  display: none;
+}
+
+#init {
+  margin-top: 0.7rem;
+    font-size:1rem;
+}
+#initials {
+  margin: 0.3rem;
+    font-size:1rem;
+}
+
+#showScoresButton {
+  margin-top: 0.3rem;
+  font-size:1rem;
+}
+#startButton{
+  margin-top: 5%;
+}
+
+#myInput
+{
+    font-size: 1.7rem;
+    border: none;
+  
+    background: none;
+    margin: 2%;
+    position: relative;
+
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .buttonArea {
+    display: grid;
+    grid-template-columns: none;
+    gap: 10px;
+    margin: 20px 0;
+  }
+}
